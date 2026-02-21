@@ -1,16 +1,18 @@
 Python Example
 ==============
 
+See also the [API documentation](https://core-docs.highchartspython.com/en/latest/api.html) of Highcharts for Python.
+
 
 
 Requirements
 ------------
 
-* Highcharts License
+* [Highcharts license](https://shop.highcharts.com)
 
-* Highcharts for Python License
+* [Highcharts for Python license](https://shop.highcharts.com)
 
-* Python 3.10 or higher (macOS comes v3.9): https://www.python.org/downloads/macos/
+* [Python v3.10 or higher](https://www.python.org/downloads/macos/) (Latest macOS has only v3.9)
 
 
 
@@ -31,6 +33,16 @@ Development Setup
 -----------------
 
 ```Shell
+python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+pip3 install -r requirements.txt
+```
+
+
+
+Execute
+-------
+
+```
+python3 my_project
 ```
