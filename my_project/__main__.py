@@ -10,7 +10,7 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 from string import Template
 
 # DEFAULTS
-# my_shared_options = SharedOptions()
+my_shared_options = SharedOptions.from_js_literal('./my_project/project_resources/highcharts_config/shared_options.js')
 
 # EXAMPLE 1. Indicating data and series_type.
 # my_chart = Chart(data = [[0, 1], [1, 2], [2, 3]],
@@ -50,7 +50,7 @@ class ChartHandler(BaseHTTPRequestHandler):
     <div id="container"></div>
     
     <script>
-        <!--${script_shared_options}-->
+        ${script_shared_options}
         ${script_chart}
     </script>
 </body>
@@ -58,7 +58,7 @@ class ChartHandler(BaseHTTPRequestHandler):
 """)
 
         html_content = html_template.safe_substitute(
-            # script_shared_options = my_shared_options.to_js_literal(),
+            script_shared_options = my_shared_options.to_js_literal(),
             script_chart = my_chart.to_js_literal()
         )
 
